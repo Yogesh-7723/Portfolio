@@ -1,0 +1,249 @@
+<html>
+    <head>
+        <style>
+            *
+            {
+                box-sizing: border-box;
+                font-family: 'popons','sans-serif';
+            }
+            body
+            {
+                padding: 0;
+                margin: 0;
+                background-color:#0c1022;
+                color: #fff;
+            }
+            header 
+            {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                
+            }
+            div nav ul li a
+            {
+               color: white;
+               text-decoration: none;
+               font-size: 20px;
+               
+            
+            }
+            div nav ul li
+            {
+                display:inline-flex;
+                margin-left: 80px;
+            }
+            .head2 
+            {
+                margin-left:560px;
+                margin-top: 40px;
+                animation: slideTop 1s ease forwards;
+        
+            }
+            .head1 
+            {
+                float: left;
+                margin-left: 60px;
+                margin-top: 40px;
+                font-size: 40px;
+                animation: slideTop 1s ease forwards;
+            }
+            .logo 
+            {
+                text-decoration: none;
+
+                text-decoration: none;
+                font-weight: 600;
+                background:linear-gradient(hsl(116, 96%, 48%),hsl(0, 0%, 100%),yellow);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                
+            }
+            div nav ul li a.active ,
+            div nav ul li a:hover
+            {
+                background:linear-gradient(45deg,#f06,#3cf);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+
+            }
+            .home 
+            {
+                width: 50%;
+                height: 50vh;
+                display: flex;
+                align-items: center;
+                padding: 70px 10% 0;
+                margin-top: 200px;
+                margin-left: 20px;
+                justify-content: space-between;
+        
+            }
+            .home-content h1
+            {
+                font-size: 40px;
+                line-height: .8;
+                font-weight: 600;
+                
+            }
+            .home-content h2
+            {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: .5;
+                
+            }
+            .home-content p
+            {
+                width: 500px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 1.2;
+                
+            }
+            .btn 
+            {
+                position: relative;
+                width: 130px;
+                height: 48px;
+                margin-left: 40px;
+                background-color: greenyellow;
+                font-size: 20px;
+                color: #fff;
+                display: inline-flex;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                letter-spacing: 1px;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
+            .btn::before 
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                inset: 0;
+                background: linear-gradient(45deg,#f06,#3cf,#f06);
+                z-index: -1;
+                border-radius: 40px;
+                background-size: 200%;
+                filter: blur(5px);
+                
+            }
+            .btn::after 
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                inset: 0;
+                background: linear-gradient(45deg,#f06,#3cf,#f06);
+                z-index: -1;
+                border-radius: 40px;
+                background-size: 200%;
+                background-position: 0 0;
+                transform: .5s ease;
+                
+            }
+            .btn:hover::after 
+            {
+                background-size: 100%;
+            }
+            .profile_img 
+            {
+                width: 300px;
+                height: 300px;
+                margin-left: 50px;
+            }
+            .profile_img .circle
+            {
+               
+               width: 100%;
+               height: 100%;
+               border-radius: 50%;
+               position: relative;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+            .profile_img .circle::after 
+            {
+                content: '';
+                position: absolute;
+                width: 280px;
+                height: 280px;
+                background-image: url("yogi_img.jpeg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-size: 350px;
+                border-radius: 50%;
+            }
+            .circle span 
+            {
+                width: 100%;
+                position: absolute;
+                height: 100%;
+                background: linear-gradient(45deg,#f06,#3cf);
+                z-index: -1;
+                border-radius: 50%;
+            }
+            @keyframes SlideTop 
+            {
+                0%
+                {
+                    margin-top: 40px;
+
+                }
+                100%
+                {
+                    margin-top: 20px;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <header>
+            <div class="head1">
+                <a href="#" class="logo" >Yogesh Yadav</a>
+            </div>
+            <div class="head2">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="home">
+            <div class="home-content">
+                <h1>Hi, I am  YOGESH &nbsp;YADAV</h1>
+                <h2>Frontent Developer</h2>
+                <p>I am purshing my engineering from Swami
+                    Vivekanand College of Engineering Indore from 
+                    ELectronics and Communication Branch.
+                </p>
+                <a href="#" class="btn">Hire me</a>
+
+            </div>
+            <div>
+                <div class="profile_img">
+                    <div class="circle">
+                        <span></span>
+                        <span></span>
+        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
